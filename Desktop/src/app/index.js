@@ -28,7 +28,9 @@ function reset() {
   houri.innerText = '00';
   minutei.innerText = '00';
   secondi.innerText = '00';
-  millisecondi.innerText = '000';
+  music4.src = "()";
+  played = false
+  // millisecondi.innerText = '000';
 }
 
 function timer() {
@@ -47,15 +49,14 @@ function timer() {
   houri.innerText = returnData(hour);
   minutei.innerText = returnData(minute);
   secondi.innerText = returnData(second);
-  millisecondi.innerText = returnData(millisecond);
-  if(hour == 1 && played == false){
+  // millisecondi.innerText = returnData(millisecond);
+  let Finalvalue =  String(document.getElementById("lname").value).split(':')
+  console.log(Finalvalue)
+  if(returnData(hour) == Finalvalue[0] && returnData(minute) == Finalvalue[1] && returnData(second) == Finalvalue[2] && played == false){
     console.log("1 minute has passed")
     music4.src = srcold;
     music4.play();
     played = true;
-  }else if(!hour == 1){
-    console.log("NOT A MINUTE")
-    music4.src = "/nothing"
   }
 }
 
