@@ -6,7 +6,8 @@ const houri = document.getElementById('hour')
 const minutei = document.getElementById('minute')
 const secondi = document.getElementById('second')
 const millisecondi = document.getElementById('millisecond')
-let srcold = document.getElementById("multiaudio4").src
+const srcold = document.getElementById("multiaudio4").src
+const music4 = document.getElementById("multiaudio4")
 let cron;
 let played = false;
 
@@ -49,12 +50,12 @@ function timer() {
   millisecondi.innerText = returnData(millisecond);
   if(hour == 1 && played == false){
     console.log("1 minute has passed")
-    document.getElementById('multiaudio4').src = "./cheater.mp3";
-    document.getElementById('multiaudio4').play();
+    music4.src = srcold;
+    music4.play();
     played = true;
   }else if(!hour == 1){
     console.log("NOT A MINUTE")
-    document.getElementById("multiaudio4").src = "/nothing"
+    music4.src = "/nothing"
   }
 }
 
