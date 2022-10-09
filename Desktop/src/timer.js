@@ -54,11 +54,14 @@ function timer() {
   // millisecondi.innerText = returnData(millisecond);
   let Finalvalue =  String(document.getElementById("lname").value).split(':')
   console.log(Finalvalue)
-  if(returnData(hour) == Finalvalue[0] && returnData(minute) == Finalvalue[1] && returnData(second) == (Finalvalue[2]) - 2 && played == false){
-    console.log("1 minute has passed")
-    music4.src = srcold;
-    music4.play();
-    played = true;
+  if(returnData(hour) == Finalvalue[0] && returnData(minute) == Finalvalue[1] && played == false){
+    if(returnData(second) == (Finalvalue[2]) - 2  || returnData(second) == (Finalvalue[2])){
+      console.log("1 minute has passed")
+      music4.src = srcold;
+      music4.play();
+      played = true;
+    }
+    
   }
 }
 
