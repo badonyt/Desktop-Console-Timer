@@ -1,15 +1,17 @@
-# Running Desktop Application(Non executable)
+# Intro 
+Uses tauri
 
-To run the desktop version, you have to 
-1. Install node.js
-2. Open a cmd, in the desktop folder
-3. Run <code>npm install --save-dev electron</code>
-4. Then <code>npm start</code> . Which runs 
+# Run application
+To run this install the source code then:
+1. have node.js
+2. have rust installed
+3. Have Microsoft Visual Studio C++ Build Tools(visual studio 2022)
+4. Have webview2
+5. run <code>npm install</code>
+6. run <code>npm run tauri dev</code>
 
-# Convert to exe
+# Compile
 
-1. Do the steps above in Running Desktop Application(Non executable)
-2. Open a cmd, in the desktop folder
-3. run <code>npm install --save-dev @electron-forge/cli</code>
-4. then <code>npx electron-forge import</code>
-5. finally <code>npm run make</code>
+1. Do run application
+2. run <code>npm run tauri build</code>
+3. Then it should be in ./src-tauri/target/release
